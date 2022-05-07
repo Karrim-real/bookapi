@@ -28,7 +28,12 @@ class BookController extends Controller
      */
     public function create(Request $request)
     {
-        $datas = $request->all();
+        $datas = $request->validate([
+            'title' => 'required',
+            'author' => 'required',
+            'desc' => 'required',
+            'price' => 'required'
+        ]);
         // dd($datas);
         $data = Book::create($datas);
         return response()->json([
