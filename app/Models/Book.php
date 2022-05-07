@@ -13,7 +13,8 @@ class Book extends Model
         'author',
         'desc',
         'price',
-        'status'
+        'status',
+        'reference'
     ];
 
     //Note : The status of the book is determine by 0 and 1

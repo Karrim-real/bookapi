@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('author');
             $table->string('desc');
             $table->string('price');
+            $table->string('reference');
             $table->boolean('status')->default('0');
             $table->timestamps();
         });

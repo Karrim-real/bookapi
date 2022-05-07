@@ -35,6 +35,7 @@ class BookController extends Controller
             'price' => 'required'
         ]);
         // dd($datas);
+        $datas['reference'] = 'bkref'.time().''.rand(100,999);
         $data = Book::create($datas);
         return response()->json([
             'status' => 'sucess',
